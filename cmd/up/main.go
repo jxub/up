@@ -62,6 +62,7 @@ func run() error {
 		"os":      runtime.GOOS,
 		"arch":    runtime.GOARCH,
 		"version": version,
+		"plan":    "pro",
 	})
 
 	return app.Run(version)
