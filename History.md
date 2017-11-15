@@ -1,4 +1,9 @@
 
+v0.1.2-pro / 2017-11-15
+=======================
+
+  * fix missing logs when json does not take the shape of a log. Closes #411
+
 v0.1.0-pro / 2017-11-15
 =======================
 
