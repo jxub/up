@@ -1,10 +1,14 @@
-
 v0.3.4 / 2017-11-20
 ===================
 
   * add `up accounts ci` and --copy to help with setting up UP_CONFIG for CI
   * fix domain verification for ssl certificates. Closes #425
   * update tj/kingpin for arg output formatting fix
+
+v0.1.4-pro / 2017-11-18
+=======================
+
+  * Rebase
 
 v0.3.3 / 2017-11-18
 ===================
