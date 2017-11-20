@@ -13,6 +13,7 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
+	"sort"
 	"strings"
 	"syscall"
 	"time"
@@ -338,4 +339,13 @@ func Md5(s string) string {
 	h := md5.New()
 	h.Write([]byte(s))
 	return hex.EncodeToString(h.Sum(nil))
+}
+
+// StringMapKeys returns keys for m.
+func StringMapKeys(m map[string]string) (keys []string) {
+	for k := range m {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	return
 }
