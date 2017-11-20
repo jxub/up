@@ -1,10 +1,15 @@
-
 v0.3.5 / 2017-11-21
 ===================
 
   * add `stage` field to all log contexts (fixes log filtering against `production`)
   * fix DNS record logical id collision. Closes #420
   * refactor `up stack` output
+
+v0.1.5-pro / 2017-11-20
+=======================
+
+  * fix "development" env support for `up env`
+  * Rebase
 
 v0.3.4 / 2017-11-20
 ===================
