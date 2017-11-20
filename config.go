@@ -86,6 +86,9 @@ type Config struct {
 
 	// DNS config.
 	DNS config.DNS `json:"dns"`
+
+	// Alerting config.
+	config.Alerting
 }
 
 // Validate implementation.
@@ -124,6 +127,10 @@ func (c *Config) Validate() error {
 
 	if err := c.Stages.Validate(); err != nil {
 		return errors.Wrap(err, ".stages")
+	}
+
+	if err := c.Alerting.Validate(); err != nil {
+		return err
 	}
 
 	return nil
@@ -209,6 +216,11 @@ func (c *Config) Default() error {
 	// default .stages
 	if err := c.Stages.Default(); err != nil {
 		return errors.Wrap(err, ".stages")
+	}
+
+	// default .alerting
+	if err := c.Alerting.Default(); err != nil {
+		return err
 	}
 
 	return nil
@@ -334,12 +346,12 @@ func javaGradle(c *Config) {
 	}
 
 	if c.Hooks.Build.IsEmpty() {
-		// assumes build results in a shaded jar named server.jar		
+		// assumes build results in a shaded jar named server.jar
 		if util.Exists("gradlew") {
 			c.Hooks.Build = config.Hook{`./gradlew clean build && cp build/libs/server.jar .`}
 		} else {
 			c.Hooks.Build = config.Hook{`gradle clean build && cp build/libs/server.jar .`}
-		}		
+		}
 	}
 
 	if c.Hooks.Clean.IsEmpty() {
@@ -352,14 +364,14 @@ func javaMaven(c *Config) {
 	if c.Proxy.Command == "" {
 		c.Proxy.Command = "java -jar server.jar"
 	}
-	
+
 	if c.Hooks.Build.IsEmpty() {
-		// assumes package results in a shaded jar named server.jar		
+		// assumes package results in a shaded jar named server.jar
 		if util.Exists("mvnw") {
 			c.Hooks.Build = config.Hook{`./mvnw clean package && cp target/server.jar .`}
 		} else {
-			c.Hooks.Build = config.Hook{`mvn clean package && cp target/server.jar .`}	
-		}						
+			c.Hooks.Build = config.Hook{`mvn clean package && cp target/server.jar .`}
+		}
 	}
 
 	if c.Hooks.Clean.IsEmpty() {
