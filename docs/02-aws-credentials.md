@@ -136,7 +136,8 @@ If you're using Up for a production application it's highly recommended to confi
     {
       "Effect": "Allow",
       "Action": [
-        "cloudwatch:Get*"
+        "cloudwatch:Get*",
+        "cloudwatch:Put*"
       ],
       "Resource": "*"
     },
