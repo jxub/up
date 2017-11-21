@@ -1,4 +1,9 @@
 
+v0.1.8-pro / 2017-11-20
+=======================
+
+  * add TreatMissingData as ignore by default
+
 v0.1.7-pro / 2017-11-20
 =======================
 
