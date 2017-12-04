@@ -1,4 +1,3 @@
-
 v0.4.0 / 2017-12-18
 ===================
 
@@ -17,6 +16,11 @@ v0.4.0 / 2017-12-18
   * remove `--region` flag
   * fix upgrade messages for OSS -> Pro
   * fix clearing state in text reporter  
+
+v0.3.0-pro / 2017-12-03
+=======================
+
+  * add sms alerting support
 
 v0.2.0-pro / 2017-12-03
 =======================
