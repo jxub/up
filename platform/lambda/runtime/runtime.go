@@ -40,6 +40,9 @@ func WithLogger(l log.Interface) Option {
 
 // Init implementation.
 func (r *Runtime) Init(stage string) error {
+	os.Setenv("UP_STAGE", stage)
+	os.Setenv("NODE_ENV", stage)
+
 	if err := r.loadSecrets(stage); err != nil {
 		return errors.Wrap(err, "loading secrets")
 	}
@@ -61,9 +64,6 @@ func (r *Runtime) loadSecrets(stage string) error {
 	if err != nil {
 		return err
 	}
-
-	os.Setenv("UP_STAGE", stage)
-	os.Setenv("NODE_ENV", stage)
 
 	secrets = secret.FilterByApp(secrets, r.config.Name)
 	stages := secret.GroupByStage(secrets)
