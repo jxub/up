@@ -6,7 +6,7 @@ Configuration for your app lives in the `up.json` within your project's director
 
 ## Name
 
-The name of the application, which is used to name resources such as the Lambda function or API Gateway. 
+The name of the application, which is used to name resources such as the Lambda function or API Gateway.
 
 ```json
 {
@@ -785,6 +785,6 @@ An alert requires a `metric` such as request count or latency, statistic such as
 - `evaluation_periods` – Number of periods to evaluate over (default: `1`)
 - `operator` – Operator is the comparison operator (default `>`)
 - `namespace` – Metric namespace (example: "AWS/ApiGateway")
-- `missing`– How to treat missing data (default: `missing`)
+- `missing`– How to treat missing data (default: `notBreaching`)
 - `disable` – Disable or mute the alert
 - `description` – Description of the alert
