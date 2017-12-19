@@ -1,4 +1,3 @@
-
 v0.4.5 / 2017-12-22
 ===================
 
@@ -17,6 +16,12 @@ v0.4.4 / 2017-12-19
 
   * fix `up stack status` scenario before a domain is mapped
   * refactor: config, simplify unmarshal json of dns. Closes #497
+=======
+v0.4.2-pro / 2017-12-19
+=======================
+
+  * Rebase
+>>>>>>> Release v0.4.2-pro
 
 v0.4.3 / 2017-12-19
 ===================
@@ -70,7 +75,7 @@ v0.4.0 / 2017-12-18
   * change how expanded log mode looks
   * remove `--region` flag
   * fix upgrade messages for OSS -> Pro
-  * fix clearing state in text reporter  
+  * fix clearing state in text reporter
 
 v0.3.0-pro / 2017-12-03
 =======================
