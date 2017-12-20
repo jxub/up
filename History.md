@@ -11,17 +11,21 @@ v0.4.5 / 2017-12-22
   * refactor: drop unnecessary `fmt.Sprintf` in reporter/text (#506)
   * refactor: simplify personal team check (#500)
 
+v0.4.3-pro / 2017-12-19
+=======================
+
+  * Rebase
+
 v0.4.4 / 2017-12-19
 ===================
 
   * fix `up stack status` scenario before a domain is mapped
   * refactor: config, simplify unmarshal json of dns. Closes #497
-=======
+
 v0.4.2-pro / 2017-12-19
 =======================
 
   * Rebase
->>>>>>> Release v0.4.2-pro
 
 v0.4.3 / 2017-12-19
 ===================
