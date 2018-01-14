@@ -21,7 +21,7 @@
 var stream = require('stream'),
     util = require('util');
 
-// convinience API
+// convenience API
 module.exports = function(readStream, options) {
   return module.exports.createStream(readStream, options);
 };
